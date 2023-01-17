@@ -1,0 +1,79 @@
+@import "../variable/_variable";
+
+@mixin h4 ($font-size, $text-transform){
+    font-size: $font-size;
+    text-transform: $text-transform;
+    font-weight: 700;
+    letter-spacing: .4em;
+    color: $para-color;
+    margin-bottom: 0;
+    margin-top: -3px;
+}
+@mixin h1 ($font-size){
+    font-size: $font-size;
+    color: $heading-color;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+@mixin btn-solid {
+    padding: 13px 29px;
+    color: #fff !important;
+    letter-spacing: .05em;
+    border: 2px solid $theme-default !important;
+    background-image: linear-gradient(30deg, ($theme-default) 50%, transparent 50%) !important;
+    background-size: 850px;
+    background-repeat: no-repeat;
+    background-position: 0;
+    transition: background .3s ease-in-out;
+    margin-top: 20px;
+    &:hover {
+        background-position: 100%;
+        color: #000!important;
+        background-color:#fff;
+    }
+}
+@mixin btn {
+    line-height: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: $lato;
+    border-radius: 0;
+    transition: .3s ease-in-out;
+    &:hover {
+        transition: .3s ease-in-out;
+    }
+}
+@mixin section_heading{
+    text-align: center;
+    h5{
+        font-size: 18px;
+        color: $theme-default;
+        text-transform: capitalize;
+        font-weight: 400;
+    }
+    h3{
+        font-size: 32px;
+        color: $heading-color;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: .02em;
+        position: relative;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        &::after{
+            position: absolute;
+            left: 560px;
+            top: 40px;
+            transform: translate(-50%, -50%);
+            height: 2px;
+            width: 70px;
+            background-color: $theme-default;
+            content: "";
+        }
+    }
+    p{
+        padding: 0 311px 30px;
+    }
+}

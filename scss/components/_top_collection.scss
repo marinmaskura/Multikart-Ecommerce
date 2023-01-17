@@ -1,0 +1,169 @@
+@import '../base/common';
+@import '../variable/_variable';
+@import '../mixin/mixin';
+/*===================================================
+                top collection Part Start
+=================================================== */
+#top_collection{
+    margin-bottom: 70px;
+    .container{
+        .section_heading{
+            @include section_heading;
+        }
+        .row{
+            .col-lg-3{
+                .top_collection_item{
+                    display: block;
+                    margin: 0 12px;
+                    /* background: red; */
+                    .image_box{
+                        position: relative;
+                        overflow: hidden;
+                        &:hover{
+                            .icons a{
+                                transform: translateX(0px);
+                              }
+                          }
+                        .label{
+                            width: 40px;
+                            height: 40px;
+                            background: red;
+                            border-radius: 50%;
+                            color: #fff;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                        }
+                        .icons{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            gap: 10px;
+                            width: 60px;
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                            a{
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                border: 1px dotted brown;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transform: translateX(100px);
+                                &:nth-child(1){
+                                    transition: all linear 0.1s;
+                                  }
+                                &:nth-child(2){
+                                    transition: all linear 0.2s;
+                                  }
+                                &:nth-child(3){
+                                    transition: all linear 0.3s;
+                                  }
+                                &:nth-child(4){
+                                    transition: all linear 0.4s;
+                                  }
+                              }
+                        }
+                        .display{
+                            img{
+                                display: none;
+                            }
+                            img.active{
+                                display: block;
+                            }
+                        }
+                        .thambnail{
+                            position: absolute;
+                            padding: 5px;
+                            left: -35px;
+                            bottom: 0;
+                            z-index: 10;
+                            ul{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                li{
+                                    width: 50px;
+                                    border: 1px solid transparent;
+                                    a {
+                                        img {
+                                            filter: opacity(30%);
+                                        }
+                                    }
+                                }
+                                .active {
+                                    border: 1px solid red;
+                                    filter: opacity(100%);
+                                }
+                            }
+                        }
+                    }
+                    .text_box{
+                        .stars{
+                            i{
+                                color: $review-star;
+                                font-size: 13px;
+                            }
+                        }
+                        .text{
+                            a{}
+                            p{
+                                line-height: 1;
+                                margin-bottom: 3px;
+                                padding-top: 0;
+                                padding-bottom: 5px;
+                                transition: all .5s ease;
+                                font-size: 16px;
+                                margin-top: 0;
+                            }
+                            h4{
+                                font-size: 18px;
+                                color: #222;
+                                font-weight: 700;
+                                margin-bottom: 0;
+                                del{
+                                    color: #aaa;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                        .colors{
+                            display: flex;
+                            align-items: center;
+                            justify-content: start;
+                            gap: 10px;
+                            span {
+                                display: inline-block;
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                cursor: pointer;
+                            }
+                            .red {
+                                background: #4C4B2C;
+                            }
+                            .green {
+                                background: #D48F2C;
+                            }
+                            .blue {
+                                background: #D0CDD4;
+                            }
+                            .active{
+                                border: 1px solid red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*===================================================
+                top collection Part Start
+=================================================== */

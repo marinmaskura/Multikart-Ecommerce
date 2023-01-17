@@ -1,0 +1,70 @@
+@import '../base/common';
+@import '../variable/_variable';
+@import '../mixin/mixin';
+/*===================================================
+                special_products Part Start
+=================================================== */
+#service{
+    .container{
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        padding: 30px 0;
+        .row{
+            .col-lg-4.border-none{
+                border-left: 0;
+            }
+            .col-lg-4{
+                border-left: 1px solid $border-color;
+                
+                .service_item{
+                    padding: 23px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    transition: all .5s ease;
+                    &:hover{
+                        svg{
+                            transform: scale(1.05);
+                            transition: all 0.5s ease;
+                        }
+                        cursor: auto;
+                        h5{
+                            color: $theme-default;
+                            transition: all 0.5s ease;
+                        }
+                    }
+                    .icon{
+                        color: #ff4c3b;
+                        svg{
+                            width: 60px;
+                            height: 60px;
+                            color: $theme-default;
+                            fill: $theme-default;
+                            transition: all .5s ease;
+                            &:hover{
+                                transform: scale(1.05);
+                                transition: all 0.5s ease;
+                            }
+                        }
+                    }
+                    .text{
+                        h5{
+                            font-size: 16px;
+                            margin-bottom: 5px;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                        }
+                        p{
+                            text-transform: capitalize;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*===================================================
+                special_products Part Start
+=================================================== */

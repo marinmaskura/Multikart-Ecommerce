@@ -1,0 +1,113 @@
+@import '../base/common';
+@import '../variable/_variable';
+@import '../mixin/mixin';
+/*===================================================
+                Banner Part Start
+=================================================== */
+#banner{
+    padding-top: 0;
+    .banner_slider{
+        .slider_1{
+            background: url(../images/banner_slider_1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 120px;
+            padding-bottom: 220px;
+            .container{
+                .row{
+                    .col-lg-5{
+                        h4{
+                            @include h4(18px, capitalize);
+                        }
+                        h1{
+                            @include h1(60px);
+                        }
+                        .btn-solid {
+                            @include btn-solid;
+                        }
+                        .btn {
+                            @include btn;
+                        }
+                    }
+                }
+            }
+        }
+        .slider_2{
+            background: url(../images/banner_slider_2.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 120px;
+            padding-bottom: 220px;
+            .container{
+                .row{
+                    .col-lg-5{
+                        h4{
+                            @include h4(18px, capitalize);
+                        }
+                        h1{
+                            @include h1(60px);
+                        }
+                        .btn-solid {
+                            @include btn-solid;
+                        }
+                        .btn {
+                            @include btn
+                        }
+                    }
+                }
+            }
+        }
+        .prev_arrow{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #000;
+            background: #D6D6D6;
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+            z-index: 100;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            
+        }
+        .next_arrow{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #000;
+            background: #D6D6D6;
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            z-index: 100;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;         
+        }
+        &:hover .prev_arrow{
+            opacity: 1;
+            visibility: visible;
+        }
+        &:hover .next_arrow{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+/*===================================================
+                Banner Part End
+=================================================== */

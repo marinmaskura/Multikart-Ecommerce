@@ -1,0 +1,38 @@
+@import '../variable/variable';
+/* All Common css Start */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+body{
+    font-family: $lato;
+}
+ul,ol,li {
+    list-style: none;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+a:hover {
+    display: inline-block;
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 400;
+    font-family: $lato;
+    color: $heading-color;
+}
+img {
+    vertical-align: middle;
+}
+section{
+    padding-top: 70px;
+}
+p{
+    font-size: 14px;
+    color: $para-color;
+}
+/* All Common css End */

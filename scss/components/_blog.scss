@@ -1,0 +1,27 @@
+@import '../base/common';
+@import '../variable/_variable';
+@import '../mixin/mixin';
+/*===================================================
+                special_products Part Start
+=================================================== */
+#blog{
+    .container{
+        .section_heading{
+            @include section_heading;
+        }
+        .blog_items{
+            display: flex;
+            .row{
+                .col-lg-3{
+                    .items{
+                        .image{}
+                        .text{}
+                    }
+                }
+            }
+        }
+    }
+}
+/*===================================================
+                special_products Part Start
+=================================================== */
