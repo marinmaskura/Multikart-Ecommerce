@@ -1200,52 +1200,6 @@ p {
 /*===================================================
                 special_products Part Start
 =================================================== */
-/* All Common css Start */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  outline: 0;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-}
-
-ul, ol, li {
-  list-style: none;
-}
-
-a {
-  display: inline-block;
-  text-decoration: none;
-}
-
-a:hover {
-  display: inline-block;
-  text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
-  font-family: "Lato", sans-serif;
-  color: #222;
-}
-
-img {
-  vertical-align: middle;
-}
-
-section {
-  padding-top: 70px;
-}
-
-p {
-  font-size: 14px;
-  color: #777;
-}
-
-/* All Common css End */
 /*===================================================
                 special_products Part Start
 =================================================== */
@@ -1282,9 +1236,51 @@ p {
 #blog .container .section_heading p {
   padding: 0 311px 30px;
 }
-#blog .container .blog_items {
-  display: flex;
+#blog .container .blog_items .col-lg-3 .items {
+  margin: 0 10px;
 }
+#blog .container .blog_items .col-lg-3 .items .text {
+  text-align: center;
+  padding: 0 20px;
+}
+#blog .container .blog_items .col-lg-3 .items .text h5 {
+  margin: 10px 0 0;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #ff4c3b;
+}
+#blog .container .blog_items .col-lg-3 .items .text a h3 {
+  font-size: 16px;
+  padding: 0 0 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin-top: 10px;
+  margin-bottom: 0;
+  transition: all 0.5s ease;
+  position: relative;
+}
+#blog .container .blog_items .col-lg-3 .items .text a h3:hover {
+  color: #ff4c3b;
+}
+#blog .container .blog_items .col-lg-3 .items .text a h3::after {
+  content: "";
+  width: 75px;
+  height: 1px;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  margin-top: 13px;
+  background: #222;
+  text-align: center;
+  opacity: 1;
+  position: absolute;
+}
+#blog .container .blog_items .col-lg-3 .items .text p {
+  padding: 5px 0 0;
+}
+
 /*===================================================
                 special_products Part Start
 =================================================== *//*# sourceMappingURL=style.css.map */
