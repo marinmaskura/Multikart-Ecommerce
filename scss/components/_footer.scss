@@ -1,0 +1,226 @@
+@import '../variable/_variable';
+@import '../mixin/mixin';
+
+/*===================================================
+                Footer Part Start
+=================================================== */
+footer{
+    background: #f9f9f9;
+    .footer_container{
+        .subscribe{
+            padding: 35px 0;
+            border-bottom: 1px solid #dddddd;
+            .row{
+                .news_text{
+                    border-right: 1px solid #dddddd;
+                    h4{
+                        color: #222;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        display: block;
+                        margin: 0;
+                    }
+                    p{
+                        margin: 0;
+                    }
+                }
+                .input_box{
+                    padding-left: 30px;
+                    form{
+                        overflow: hidden;
+                        display: flex;
+                        gap: 20px;
+                        justify-content: flex-end;
+                        input[type=email]{
+                            @include email_box
+                            // background: #ffffff;
+                            // padding: 20px 10px;
+                            // border: none;
+                            // width: 70%;
+                            // border: 1px solid #eeeeee;
+                            // &::placeholder{
+                            //     padding: 0
+                            // }
+                        }
+                        input[type=submit]{
+                            @include btn-solid;
+                            margin: 0;
+                            // background: $theme-default;
+                            // color: #ffffff;
+                            // padding: 20px 10px;
+                            // border: none;
+                            // width: 30%;
+                          }
+                      }
+                  }
+            }
+        }
+        .middle{
+            padding: 30px 0;
+            .footer_content{
+                .logo{
+                    margin-bottom: 18px;
+                }
+                p{
+                    line-height: 32px;
+                    letter-spacing: .03em;
+                    margin-bottom: 0;
+                }
+                .icon{
+                    margin-top: 40px;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px
+                }
+            }
+            .categories{
+                h4{
+                    font-size: 16px;
+                    color: #222;
+                    margin-bottom: 25px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+                ul{
+                    li{
+                        padding-top: 13px;
+                        a{
+                            text-transform: capitalize;
+                            position: relative;
+                            transition: $transition;
+                            font-size: 14px;
+                            color: #777;
+                            &::after{
+                                content: "";
+                                width: 0;
+                                height: 2px;
+                                background: $theme-default;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                transition: $transition;
+                            }
+                            &:hover::after{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .choose{
+                h4{
+                    font-size: 16px;
+                    color: #222;
+                    margin-bottom: 25px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+                ul{
+                    li{
+                        padding-top: 13px;
+                        a{
+                            text-transform: capitalize;
+                            position: relative;
+                            transition: $transition;
+                            font-size: 14px;
+                            color: #777;
+                            &::after{
+                                content: "";
+                                width: 0;
+                                height: 2px;
+                                background: $theme-default;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                transition: $transition;
+                            }
+                            &:hover::after{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .address{
+                h4{
+                    font-size: 16px;
+                    color: #222;
+                    margin-bottom: 25px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+                ul{
+                    li{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        padding-top: 13px;
+                        i{
+                            color: $para-color;
+                            font-size: 14px;
+                        }
+                        p{
+                            margin: 0;
+                            line-height: 1;
+                        }
+                        a{
+                            display: block;
+                            color: $para-color;
+                            // text-transform: capitalize;
+                            // position: relative;
+                            // transition: $transition;
+                            // font-size: 14px;
+                            // color: #777;
+                            // &::after{
+                            //     content: "";
+                            //     width: 0;
+                            //     height: 2px;
+                            //     background: $theme-default;
+                            //     position: absolute;
+                            //     left: 0;
+                            //     bottom: 0;
+                            //     transition: $transition;
+                            // }
+                            // &:hover::after{
+                            //     width: 100%;
+                            // }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    .powered{
+        background: #ffffff;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        .container{
+            .text{
+                display: flex;
+                gap: 2px;
+                align-items: center;
+                p{
+                    margin: 0;
+                }
+                i{
+                    text-align: center;
+                    color: $para-color;
+                    font-size: 14px;
+                }
+            }
+            .image{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+/*===================================================
+                Footer Part Start
+=================================================== */

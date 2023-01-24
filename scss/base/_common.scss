@@ -8,9 +8,17 @@
 }
 body{
     font-family: $lato;
+    overflow-x: hidden;
+}
+.dark{
+    background-color: #2b2b2b;
+    transition: all .3s ease;
+    color: #cfd4da !important;
 }
 ul,ol,li {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 a {
     display: inline-block;
@@ -25,6 +33,11 @@ h1,h2,h3,h4,h5,h6 {
     font-family: $lato;
     color: $heading-color;
 }
+.dark h1,h2,h3,h4,h5,h6 {
+    font-weight: 400;
+    font-family: $lato;
+    color: $heading-color;
+}
 img {
     vertical-align: middle;
 }
@@ -35,4 +48,175 @@ p{
     font-size: 14px;
     color: $para-color;
 }
+
+/*======================================
+              Theme Feature Start              
+========================================*/
+.theme_feature{
+    .setting{
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #f7f7f7;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px 0 0 5px;
+        box-shadow: 0 0 5px #9a9a9a8a;
+        transition: all .5s ease;
+        z-index: 2;
+        i{
+            animation: wheel 3s infinite linear;
+            font-size: 17px;
+            color: #3c3c3c;
+            // margin-left: 10px;
+            @keyframes wheel {
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(400deg);
+                }
+            }
+        }
+    }
+    .dark_light {
+        position: fixed;
+        right: 0;
+        width: 40px;
+        height: 38px;
+        display: flex;
+        z-index: 1;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        text-decoration: none;
+        border-radius: 5px 0 0 5px;
+        background-color: #f7f7f7;
+        box-shadow: 0 0 5px #9a9a9a8a;
+        top: calc(50% + 34px);
+        cursor: pointer;
+        span{
+            text-transform: capitalize;
+            font-size: 13px;
+            font-weight: 400;
+        }
+    }
+    .dark.dark_light{
+        background: #2b2b2b;
+    }
+}
+
+.offcanvas{
+    .setting-body{
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            width: 5px;
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            height: 5px !important;
+            border-radius: 10px;
+            background: gray;
+        }
+        .accordion{
+            .accordion-item{
+                .accordion-header{
+                    .accordion-button{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        &:focus {
+                            z-index: 3;
+                            border-color: transparent;
+                            outline: 0;
+                            box-shadow: none;
+                        }
+                        &:not(.collapsed) {
+                            color: $heading-color; 
+                            background-color: transparent;
+                            box-shadow: none;
+                            &::after {
+                                background-image: none;
+                                transform: rotate(0);
+                            }
+                        }
+                        &::after {
+                            content: "\2b";
+                            font-family: "font awesome 5 free";
+                            background-image: none;
+                        }
+                    }
+                }
+                .accordion-collapse{                 
+                    .accordion-body{
+                        height: 300px;  
+                        overflow-y: scroll;
+                        &::-webkit-scrollbar {
+                            width: 5px;
+                            background: transparent;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            height: 5px !important;
+                            border-radius: 10px;
+                            background: gray;
+                        } 
+                        ul{
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            li{
+                                width: 45%;
+                                display: block;
+                                padding: 0;
+                                .box{
+                                    height: 145px;
+                                    width: 100%;
+                                    display: inline-flex;
+                                    background-size: cover;
+                                    transition: all 2s ease-out 0s;
+                                    box-shadow: -1px 2px 5px 1px #ececec;
+                                }
+                                .text{
+                                    p{
+                                        font-size: 16px;
+                                        margin-top: 10px;
+                                        margin-bottom: 0;
+                                        color: #000;
+                                    }
+                                    a{
+                                        font-size: 14px;
+                                        text-align: center;
+                                        margin: 5px 15px;
+                                        font-weight: 700;
+                                        border: 1px solid #ddd;
+                                        background-color: #fff;
+                                        color: $theme-default;
+                                        padding: 5px 10px;
+                                        border-radius: 30px;
+                                        transition: $transition;
+                                        &:hover{
+                                            color: #fff;
+                                            background: $theme-default;
+                                            border: 1px solid $theme-default;
+                                        }
+                                        &::after{
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*======================================
+              Theme Feature End              
+========================================*/
 /* All Common css End */

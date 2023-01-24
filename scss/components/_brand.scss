@@ -1,0 +1,30 @@
+@import '../variable/_variable';
+@import '../mixin/mixin';
+/*===================================================
+                brand Part Start
+=================================================== */
+#brand{
+    margin: 0 0 70px;
+    .container{
+        .row{
+            .col-lg-3{
+               a{
+                img{
+                    filter: grayscale(100%);
+                    opacity: .5;
+                    transition: .5s ease;
+                    margin: 0 auto;
+                    &:hover{
+                        filter: grayscale(0);
+                        opacity: 1;
+                        transition: .5s ease;
+                    }
+                }
+               } 
+            }
+        }
+    }
+}
+/*===================================================
+                brand Part Start
+=================================================== */

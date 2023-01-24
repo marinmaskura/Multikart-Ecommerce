@@ -93,14 +93,16 @@ header{
             }
         }
     }
+// Navbar Start
     #navbar{
-        background: #fff;
+        background: transparent;
         // padding: 30px 0;
         /* position: absolute; */
         width: 100%;
         // top: 0;
         // transition: all linear 1.5s;
-        .container{
+        .nav_container{
+            position: relative;
             .btn {
                 border: none;
                 background: transparent;
@@ -121,6 +123,7 @@ header{
                     margin-left: 8px;
                     display: flex;
                     align-items: center;
+                    position: relative;
                     a{
                         color: $heading-color;
                         font-size: 14px;
@@ -134,45 +137,194 @@ header{
                             padding-left: 10px;
                         }
                     }
-                    .new{
-                        background: $theme-default;
-                        position: absolute;
-                        top: 15px;
-                        right: 475px;
-                        padding: 2px 6px;
-                        color: #fff;
-                        font-size: 10px;
-                        font-weight: 500;
-                        z-index: 20;
-                        &::after{
-                            content: "";
-                            width: 10px;
-                            height: 10px;
-                            background: $theme-default;
-                            position: absolute;
-                            left: 5px;
-                            top: 11px;
-                            transform: rotate(45deg);
-                            z-index: -1;
-                        }
-                    }
                     .cart_number{
                         background: $theme-default;
                         position: absolute;
-                        top: 20px;
-                        right: 124px;
+                        top: -14px;
+                        left: 24px;
                         padding: 2px 6px;
                         color: #fff;
                         font-size: 10px;
                         font-weight: 500;
                         border-radius: 100%;
                     }
+                    /*======== Drop Down Start=======*/ 
+                    .drop_down{
+                        position: absolute;
+                        width: 200px;
+                        background: #fff;
+                        left: 0;
+                        top: calc(100% + 10px);
+                        z-index: 50;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: $transition;
+                        li{
+                            position: relative;
+                            padding: 10px 0 0;
+                            margin-bottom: 7px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            i{
+                                padding-right: 15px;
+                                font-size: 10px;
+                                font-weight: bolder;
+                            }
+                            a{
+                                padding: 3px 20px;
+                                text-transform: capitalize;
+                                position: relative;
+                                transition: $transition;
+                                span{
+                                    color: $theme-default;
+                                    text-transform: capitalize;
+                                    font-weight: 700;
+                                    font-size: 12px;
+                                    padding-left: 3px;
+                                }
+                                &::after{
+                                    content: "";
+                                    width: 0;
+                                    height: 2px;
+                                    background: $theme-default;
+                                    position: absolute;
+                                    left: 20px;
+                                    bottom: 0;
+                                    transition: $transition;
+                                }
+                                &:hover::after{
+                                    width: 50%;
+                                }
+                            }
+                            ul{
+                                width: 162px;
+                                background: #fff;
+                                top: 0;
+                                position: absolute;
+                                left: 100%;
+                                opacity: 0;
+                                visibility: visible;
+                                transform: $transition;
+                            }                            
+                            &:hover{
+                                ul{
+                                    transition: $transition;
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        .drop_down{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }                    
+                    /*======== Drop Down End=======*/
+                    /*======== Mega Menu Start=======*/
+                    .mega_menu{
+                        position: absolute;
+                        width: 1170px;
+                        background: #fff;
+                        top: calc(100%);
+                        left: 50%;
+                        transform: translateX(-50%);
+                        z-index: 110;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: $transition;
+                        ul{
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 5px 20px;
+                            li{
+                                width: 20%;
+                                display: block;
+                                h4{
+                                    font-weight: 700;
+                                    text-transform: capitalize;
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                    letter-spacing: .05em;
+                                }
+                                a{
+                                    display: block;
+                                    text-transform: capitalize;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    padding: 3px 0;
+                                    display: block;
+                                    letter-spacing: .07em;
+                                    line-height: 1.9;
+                                    position: relative;
+                                    transition: $transition;
+                                &::after{
+                                    content: "";
+                                    width: 0;
+                                    height: 2px;
+                                    background: $theme-default;
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+                                    transition: $transition;
+                                }
+                                &:hover::after{
+                                    width: 40%;
+                                }
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        .mega_menu{
+                            opacity: 1;
+                            visibility: visible;
+                            transition: $transition;
+                        }
+                    }
+                    /*======== Mega Menu End=======*/
+                }
+                li.features{
+                    a{
+                        position: relative;
+                        .new{
+                            background: $theme-default;
+                            position: absolute;
+                            top: -16px;
+                            left: 10px;
+                            padding: 2px 6px;
+                            color: #fff;
+                            font-size: 10px;
+                            font-weight: 500;
+                            z-index: 20;
+                            &::after{
+                                content: "";
+                                width: 10px;
+                                height: 10px;
+                                background: $theme-default;
+                                position: absolute;
+                                left: 5px;
+                                top: 11px;
+                                transform: rotate(45deg);
+                                z-index: -1;
+                            }
+                        }
+                    }
+                    &:hover{
+                        position: static;
+                    }
                 }
             }
         }
     }
+// Navbar End
 }
 .offcanvas{
+    .border-bottom {
+        padding: 30px 0;
+    }
     .btn-close{
         display: flex;
         align-items: center;
@@ -191,8 +343,210 @@ header{
         height: 0;
         background: transparent;
         border-radius: 0;
+        &:focus {
+            outline: 0;
+            box-shadow: none;
+            color: $heading-color;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: $lato;
+            opacity: 1;
+        }
+    }
+    .offcanvas-body{
+        overflow: visible;
+        ul{
+            li{
+                
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px 30px;
+                a{
+                    display: block;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 700;
+                    padding: 3px 0;
+                    display: block;
+                    letter-spacing: .07em;
+                    line-height: 1.9;
+                    position: relative;
+                    transition: $transition;
+                &::after{
+                    content: "";
+                    width: 0;
+                    height: 2px;
+                    background: $theme-default;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    transition: $transition;
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+                }
+                i{
+                    color: $heading-color;
+                    font-size: 12px;
+                    font-weight: bolder;
+                }
+                /*======== side_mega_menu Start=======*/
+                .side_mega_menu{
+                    position: absolute;
+                    background: #fff;
+                    width: 500px;
+                    top: 0;
+                    left: 100%;
+                    // z-index: 110;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: $transition;
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 5px 20px;
+                        li{
+                            width: 50%;
+                            display: block;
+                            h4{
+                                color: $heading-color;
+                                font-weight: 700;
+                                text-transform: capitalize;
+                                font-size: 14px;
+                                line-height: 24px;
+                                letter-spacing: .05em;
+                            }
+                            a{
+                                color: $heading-color;
+                                display: block;
+                                text-transform: capitalize;
+                                font-size: 14px;
+                                font-weight: 400;
+                                padding: 3px 0;
+                                display: block;
+                                letter-spacing: .07em;
+                                line-height: 1.9;
+                                position: relative;
+                                transition: $transition;
+                            &::after{
+                                content: "";
+                                width: 0;
+                                height: 2px;
+                                background: $theme-default;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                transition: $transition;
+                            }
+                            &:hover::after{
+                                width: 40%;
+                            }
+                            }
+                        }
+                    }
+                }
+                /*======== side_mega_menu End=======*/
+                
+                &:hover{
+                    cursor: pointer;
+                    .side_mega_menu{
+                        opacity: 1;
+                        visibility: visible;
+                        transition: $transition;
+                    }
+                }
+                /*======== Drop Down Start=======*/ 
+                .side_drop_down{
+                    position: absolute;
+                    width: 200px;
+                    background: #fff;
+                    left: 100%;
+                    top: 0px;
+                    // z-index: 50;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: $transition;
+                    li{
+                        position: relative;
+                        padding: 10px 0 0;
+                        margin-bottom: 7px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        i{
+                            padding-right: 15px;
+                            font-size: 10px;
+                            font-weight: bolder;
+                        }
+                        a{
+                            font-weight: 400;
+                            font-size: 14px;
+                            color: $heading-color;
+                            padding: 3px 20px;
+                            text-transform: capitalize;
+                            position: relative;
+                            transition: $transition;
+                            span{
+                                color: $theme-default;
+                                text-transform: capitalize;
+                                font-weight: 700;
+                                font-size: 12px;
+                                padding-left: 3px;
+                            }
+                            &::after{
+                                content: "";
+                                width: 0;
+                                height: 2px;
+                                background: $theme-default;
+                                position: absolute;
+                                left: 20px;
+                                bottom: 0;
+                                transition: $transition;
+                            }
+                            &:hover::after{
+                                width: 50%;
+                            }
+                        }
+                        ul.more{
+                            width: 162px;
+                            background: #fff;
+                            top: 0;
+                            position: absolute;
+                            left: 100%;
+                            opacity: 0;
+                            visibility: visible;
+                            transform: $transition;
+                        }                            
+                        &:hover{
+                            ul.more{
+                                transition: $transition;
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    .side_drop_down{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }                    
+                /*======== Drop Down End=======*/
+            }
+        }
     }
 }
+// .offcanvas.offcanvas-start {
+//     top: 0;
+//     left: 0;
+//     width: var(--bs-offcanvas-width);
+//     border-right: 0;
+//     transform: translateX(-100%);
+// }
 /*======================================
               Navbar Start              
 ========================================*/

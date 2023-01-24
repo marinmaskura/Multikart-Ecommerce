@@ -33,8 +33,8 @@
                             align-items: center;
                             justify-content: center;
                             position: absolute;
-                            left: 0;
-                            top: 0;
+                            top: 7px;
+                            left: 7px;
                         }
                         .icons{
                             display: flex;
@@ -45,27 +45,34 @@
                             width: 60px;
                             position: absolute;
                             right: 0;
-                            bottom: 0;
+                            bottom: 20px;
                             a{
                                 width: 30px;
                                 height: 30px;
-                                border-radius: 50%;
-                                border: 1px dotted brown;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
                                 transform: translateX(100px);
+                                transition: $transition;
+                                &:hover{
+                                    i{
+                                        color: $theme-default;
+                                    }
+                                }
+                                i{
+                                    color: $top-menu-text;
+                                }
                                 &:nth-child(1){
-                                    transition: all linear 0.1s;
+                                    transition: all ease 0.3s;
                                   }
                                 &:nth-child(2){
-                                    transition: all linear 0.2s;
+                                    transition: all ease 0.5s;
                                   }
                                 &:nth-child(3){
-                                    transition: all linear 0.3s;
+                                    transition: all ease 0.7s;
                                   }
                                 &:nth-child(4){
-                                    transition: all linear 0.4s;
+                                    transition: all ease 0.9s;
                                   }
                               }
                         }
@@ -80,7 +87,7 @@
                         .thambnail{
                             position: absolute;
                             padding: 5px;
-                            left: -35px;
+                            left: 0;
                             bottom: 0;
                             z-index: 10;
                             ul{
@@ -90,15 +97,15 @@
                                 li{
                                     width: 50px;
                                     border: 1px solid transparent;
-                                    a {
-                                        img {
-                                            filter: opacity(30%);
-                                        }
+                                    img {
+                                        filter: opacity(30%);
                                     }
                                 }
                                 .active {
-                                    border: 1px solid red;
-                                    filter: opacity(100%);
+                                    border: 1px solid $theme-default;
+                                    img{
+                                        filter: opacity(100%);
+                                    }
                                 }
                             }
                         }
@@ -165,4 +172,185 @@
 }
 /*===================================================
                 top collection Part Start
+=================================================== */
+/*===================================================
+             Product top collection Part Start
+=================================================== */
+#product_top_collection{
+    margin-bottom: 70px;
+    .container{
+        .section_heading{
+            h3{
+                font-size: 32px;
+                color: $heading-color;
+                text-transform: uppercase;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: .02em;
+                position: relative;
+                padding-bottom: 10px;
+                margin-bottom: 30px;
+            }
+            text-align: left;
+            border-bottom: 1px solid $border-color;
+            margin: 0 0 20px;
+        }
+        .row{
+            .col-lg-2{
+                .product_top_collection_item{
+                    display: block;
+                    margin: 0 12px;
+                    /* background: red; */
+                    .image_box{
+                        position: relative;
+                        overflow: hidden;
+                        &:hover{
+                            .icons a{
+                                transform: translateX(0px);
+                              }
+                          }
+                        .label{
+                            width: 30px;
+                            height: 30px;
+                            font-size: 12px;
+                            background: red;
+                            border-radius: 50%;
+                            color: #fff;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: absolute;
+                            top: 7px;
+                            left: 7px;
+                        }
+                        .icons{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            gap: 10px;
+                            width: 32px;
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                            a{
+                                width: 30px;
+                                height: 30px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transform: translateX(100px);
+                                transition: $transition;
+                                &:hover{
+                                    i{
+                                        color: $theme-default;
+                                    }
+                                }
+                                i{
+                                    color: $top-menu-text;
+                                }
+                                &:nth-child(1){
+                                    transition: all ease 0.3s;
+                                  }
+                                &:nth-child(2){
+                                    transition: all ease 0.5s;
+                                  }
+                                &:nth-child(3){
+                                    transition: all ease 0.7s;
+                                  }
+                                &:nth-child(4){
+                                    transition: all ease 0.9s;
+                                  }
+                              }
+                        }
+                        .display{
+                            img{
+                                display: none;
+                            }
+                            img.active{
+                                display: block;
+                            }
+                        }
+                        .thambnail{
+                            position: absolute;
+                            padding: 5px;
+                            left: 0;
+                            bottom: 0;
+                            z-index: 10;
+                            ul{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                li{
+                                    width: 50px;
+                                    border: 1px solid transparent;
+                                    img {
+                                        filter: opacity(30%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .text_box{
+                        .stars{
+                            i{
+                                color: $review-star;
+                                font-size: 13px;
+                            }
+                        }
+                        .text{
+                            a{}
+                            p{
+                                line-height: 1;
+                                margin-bottom: 3px;
+                                padding-top: 0;
+                                padding-bottom: 5px;
+                                transition: all .5s ease;
+                                font-size: 16px;
+                                margin-top: 0;
+                            }
+                            h4{
+                                font-size: 18px;
+                                color: #222;
+                                font-weight: 700;
+                                margin-bottom: 0;
+                                del{
+                                    color: #aaa;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                        .colors{
+                            display: flex;
+                            align-items: center;
+                            justify-content: start;
+                            gap: 10px;
+                            span {
+                                display: inline-block;
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                cursor: pointer;
+                            }
+                            .red {
+                                background: #4C4B2C;
+                            }
+                            .green {
+                                background: #D48F2C;
+                            }
+                            .blue {
+                                background: #D0CDD4;
+                            }
+                            .active{
+                                border: 1px solid red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*===================================================
+             Product top collection Part Start
 =================================================== */
