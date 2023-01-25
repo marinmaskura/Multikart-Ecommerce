@@ -40,9 +40,11 @@ $(function () {
     // brand Slider start
     $('.brand_slider').slick({
       slidesToShow: 5,
-      slidesToScroll: 5,
+      slidesToScroll: 4,
       arrows: false,
       draggable: true,
+      // centerMode: true,
+      // centerPadding: '60px',
     });
     //brand Slider end
 })

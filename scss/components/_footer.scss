@@ -109,6 +109,7 @@ footer{
                 
             }
             .choose{
+                padding: 0 35px;
                 h4{
                     font-size: 16px;
                     color: #222;
@@ -163,7 +164,7 @@ footer{
                         }
                         p{
                             margin: 0;
-                            line-height: 1;
+                            line-height: 1.2;
                         }
                         a{
                             display: block;
@@ -186,6 +187,16 @@ footer{
                             // &:hover::after{
                             //     width: 100%;
                             // }
+                        }
+                    }
+                    li.email{
+                        display: block;
+                        span{
+                            padding: 0 5px;
+                            color: $para-color;
+                        }
+                        a{
+                            padding: 0 20px;
                         }
                     }
                 }
