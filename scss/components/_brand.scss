@@ -9,6 +9,8 @@
         .row{
             .col-lg-3{
                a{
+                display: block;
+                text-align: center;
                 img{
                     filter: grayscale(100%);
                     opacity: .5;

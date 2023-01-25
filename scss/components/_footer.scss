@@ -70,7 +70,10 @@ footer{
                     margin-top: 40px;
                     display: flex;
                     align-items: center;
-                    gap: 20px
+                    gap: 40px;
+                    i{
+                        font-size: 20px;
+                    }
                 }
             }
             .categories{
