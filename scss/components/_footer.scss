@@ -44,6 +44,7 @@ footer{
                         }
                         input[type=submit]{
                             @include btn-solid;
+                            @include btn;
                             margin: 0;
                             // background: $theme-default;
                             // color: #ffffff;

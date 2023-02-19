@@ -1,17 +1,30 @@
 @import '../variable/_variable';
 @import '../mixin/mixin';
 /*===================================================
-                top collection Part Start
+             Product top collection Part Start
 =================================================== */
-#top_collection{
+#product_top_collection{
     margin-bottom: 70px;
     .container{
         .section_heading{
-            @include section_heading;
+            h3{
+                font-size: 32px;
+                color: $heading-color;
+                text-transform: uppercase;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: .02em;
+                position: relative;
+                padding-bottom: 10px;
+                margin-bottom: 30px;
+            }
+            text-align: left;
+            border-bottom: 1px solid $border-color;
+            margin: 0 0 20px;
         }
         .row{
-            .col-lg-3{
-                .top_collection_item{
+            .col-lg-2{
+                .product_top_collection_item{
                     display: block;
                     margin: 0 12px;
                     /* background: red; */
@@ -24,8 +37,9 @@
                               }
                           }
                         .label{
-                            width: 40px;
-                            height: 40px;
+                            width: 30px;
+                            height: 30px;
+                            font-size: 12px;
                             background: red;
                             border-radius: 50%;
                             color: #fff;
@@ -42,10 +56,10 @@
                             justify-content: center;
                             flex-direction: column;
                             gap: 10px;
-                            width: 60px;
+                            width: 32px;
                             position: absolute;
                             right: 0;
-                            bottom: 20px;
+                            bottom: 0;
                             a{
                                 width: 30px;
                                 height: 30px;
@@ -99,12 +113,6 @@
                                     border: 1px solid transparent;
                                     img {
                                         filter: opacity(30%);
-                                    }
-                                }
-                                .active {
-                                    border: 1px solid $theme-default;
-                                    img{
-                                        filter: opacity(100%);
                                     }
                                 }
                             }
@@ -191,9 +199,9 @@
                             .skyblue {
                                 background: skyblue;
                             }
-                            .active{
-                                border: 1px solid red;
-                            }
+                            // .active{
+                            //     border: 1px solid red;
+                            // }
                         }
                     }
                 }
@@ -202,5 +210,5 @@
     }
 }
 /*===================================================
-                top collection Part Start
+             Product top collection Part Start
 =================================================== */

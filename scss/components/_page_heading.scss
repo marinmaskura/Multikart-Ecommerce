@@ -1,0 +1,50 @@
+@import '../variable/_variable';
+@import '../mixin/mixin';
+/*===================================================
+                Page_heading Part Start
+=================================================== */
+#page_heading{
+    padding: 30px 0;
+    background: $top-menu-color;
+    .page_container{
+        .page_row{
+            justify-content: space-between;
+            .page_col{
+                h3{
+                    margin: 0;
+                    font-size: 16px;
+                    color: $heading-color;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    line-height: 1;
+                    letter-spacing: .02em;
+                }
+                p{  
+                    text-align: right;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 14px;
+                    color: $heading-color;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    line-height: 1;
+                    letter-spacing: .02em;
+                    a{
+                        color: $para-color;
+                        padding-right: 10px;
+                        &::after{
+                            content: "/";
+                            padding-left: 15px;
+                        }
+                    }
+                    span{
+                        color: $para-color;
+                    }
+                }
+            }
+        }
+    }
+}
+/*===================================================
+                Page_heading Part Start
+=================================================== */

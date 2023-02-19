@@ -1,0 +1,602 @@
+@import '../variable/_variable';
+@import '../mixin/mixin';
+/*===================================================
+                Product_left_sidebar Part Start
+=================================================== */
+#product_left_sidebar{
+    .product_left_container{
+        .product_left_row{
+            .category{
+                .accordion{
+                    .accordion-item{
+                        border: 1px solid $border-color;
+                        border-bottom-right-radius: 0;
+                        border-bottom-left-radius: 0;
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+                        .accordion-header{
+                            .accordion-button{
+                                border-top-left-radius: 0;
+                                border-top-right-radius: 0;
+                                &::after{
+                                    position: absolute;
+                                    display: block;
+                                    top: 14px;
+                                    font-size: 20px;
+                                    right: 10px;
+                                    content: "\f0d7";
+                                    font-family: FontAwesome;
+                                    color: #444;
+                                    background-image: none;
+                                    transform: none;
+                                }
+                                &:focus {
+                                    z-index: 3;
+                                    border-color: var(--bs-accordion-btn-focus-border-color);
+                                    outline: 0;
+                                    box-shadow: none; 
+                                }
+                                &:not(.collapsed) {
+                                    color: $heading-color;
+                                    background-color: transparent;
+                                    box-shadow: none;
+                                    position: relative;
+                                    &::after{
+                                        position: absolute;
+                                        display: block;
+                                        top: 14px;
+                                        font-size: 20px;
+                                        right: 10px;
+                                        content: "\f0d7";
+                                        font-family: FontAwesome;
+                                        color: #444;
+                                        background-image: none;
+                                        transform: none;
+                                    }
+                                }
+                            }
+                        }  
+                        .accordion-collapse{
+                            margin: 10px 22px;
+                            .accordion-body{
+                                padding: 0;
+                                max-height: 170px;
+                                overflow-y: scroll;
+                                overflow-x: hidden;
+                                &::-webkit-scrollbar {
+                                    width: 5px;
+                                    border-radius: 10px;
+                                    background: #d7d7d7;
+                                    margin-right: 10px;
+                                }
+                                &::-webkit-scrollbar-thumb {
+                                    height: 5px !important;
+                                    border-radius: 10px;
+                                    background: $theme-default;
+                                }
+                                ul{
+                                    li{
+                                        a{
+                                            font-size: 16px;
+                                            text-transform: capitalize;
+                                            color: $para-color;
+                                            padding-bottom: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }                        
+                    }
+                }
+            }
+            .shipping{
+                margin: 20px 0;
+                border: 1px solid $border-color;
+                padding: 10px;
+                ul{
+                    li{
+                        padding: 0 10px;
+                        .media{
+                            padding: 20px 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            border-bottom: 1px solid $border-color;
+                            .image{
+                                width: 40px;
+                                height: 40px;
+                                svg{
+                                    width: 100%;
+                                    height: 100%;
+                                    vertical-align: middle;
+                                    color: black;
+                                    fill: red;
+                                }
+                            }
+                            .text{
+                                padding: 0 15px;
+                                h4{
+                                    padding: 0;
+                                    margin: 0;
+                                    font-size: 18px;
+                                    text-transform: capitalize;
+                                    font-weight: 400;
+                                    letter-spacing: .03em;
+                                    line-height: 1;
+                                }
+                                p{  
+                                    font-size: 14px;
+                                    color: #777;
+                                    line-height: 24px;
+                                    letter-spacing: .03em;
+                                    padding: 0;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                        .b_none{
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+            .new_product{
+                position: relative;
+                h5{
+                    border-bottom: 1px solid #dddddd;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    padding-bottom: 10px;
+                    font-size: 16px;
+                }
+                .new_product_slider{
+                    .slider_item{
+                        ul{
+                            li{
+                                display: flex;
+                                align-items: center;
+                                .image{
+                                    
+                                    img{
+                                        height: 160px;
+                                        padding: 15px 15px 15px 0!important;
+                                    }
+                                }
+                                .text{
+                                    h6{
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        color: #777;
+                                        line-height: 24px; 
+                                    }
+                                    p{
+                                        span{
+                                            font-size: 18px;
+                                            text-transform: capitalize;
+                                            font-weight: 400;
+                                            letter-spacing: .03em;
+                                            line-height: 1;
+                                            color: $heading-color;
+                                        }
+                                        del{
+                                            font-size: 14px;
+                                            color: #aaa;
+                                            font-weight: 400;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .prev_arrow {
+                    position: absolute;
+                    right: 24px;
+                    top: -32px;
+                    cursor: pointer;
+                    color: #222;
+                }
+                .next_arrow  {
+                    position: absolute;
+                    right: 0;
+                    top: -32px;
+                    cursor: pointer;
+                    color: #222;
+                }
+            }
+            .nine{
+                .product_item{
+                    position: relative;
+                    display: block;
+                    margin: 0 12px;
+                    /* background: red; */
+                    .image_box{
+                        position: relative;
+                        overflow: hidden;
+                        padding: 0 0 190px;
+                        &:hover{
+                            .icons a{
+                                transform: translateX(0px);
+                              }
+                          }
+                        .label{
+                            width: 30px;
+                            height: 30px;
+                            font-size: 12px;
+                            background: red;
+                            border-radius: 50%;
+                            color: #fff;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: absolute;
+                            top: 7px;
+                            left: 7px;
+                        }
+                        .icons{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            gap: 10px;
+                            width: 32px;
+                            position: absolute;
+                            right: 0;
+                            bottom: 210px;
+                            a{
+                                width: 30px;
+                                height: 30px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transform: translateX(100px);
+                                transition: $transition;
+                                &:hover{
+                                    i{
+                                        color: $theme-default;
+                                    }
+                                }
+                                i{
+                                    color: $top-menu-text;
+                                }
+                                &:nth-child(1){
+                                    transition: all ease 0.3s;
+                                  }
+                                &:nth-child(2){
+                                    transition: all ease 0.5s;
+                                  }
+                                &:nth-child(3){
+                                    transition: all ease 0.7s;
+                                  }
+                                &:nth-child(4){
+                                    transition: all ease 0.9s;
+                                  }
+                              }
+                        }
+                        .display{
+                            img{
+                                display: none;
+                            }
+                            img.active{
+                                display: block;
+                            }
+                        }
+                        .thambnail{
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            z-index: 10;
+                            ul{
+                                display: flex;
+                                flex-direction: row;
+                                gap: 10px;
+                                li{
+                                    width: 119px;
+                                    height: 175px;
+                                    border: 1px solid transparent;
+                                    img {
+                                        filter: opacity(100%);
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                }
+                                li.active{
+                                    border: 1px solid $border-color;
+                                }
+                            }
+                        }
+                    }
+                    .product_text{
+                        position: absolute;
+                        right: -200px;
+                        top: 0;
+                        
+                        .stars{
+                            i{
+                                color: $review-star;
+                                font-size: 13px;
+                            }
+                        }
+                        .text{
+                            a{}
+                            p{
+                                text-transform: uppercase;
+                                margin-bottom: 15px;
+                                color: $heading-color;
+                                font-weight: 700;
+                                font-size: 25px;
+                                line-height: 1.2em;
+                            }
+                            h4{
+                                font-size: 18px;
+                                color: #222;
+                                font-weight: 700;
+                                margin-bottom: 0;
+                                .price{
+                                    display: block;
+                                    font-size: 26px;
+                                    font-weight: 400;
+                                    padding: 0;
+                                    color: #222;
+                                    margin-bottom: 15px;
+                                }
+                                del{
+                                    color: #aaa;
+                                    font-size: 14px;
+                                }
+                                span{
+                                    color: $theme-default;
+                                    font-weight: 400;
+                                    padding-left: 5px;
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                        .colors{
+                            display: flex;
+                            align-items: center;
+                            justify-content: start;
+                            gap: 10px;
+                            span {
+                                display: inline-block;
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                cursor: pointer;
+                            }
+                            .yellow {
+                                background: yellow;
+                            }
+                            .white {
+                                background: white;
+                                border: 1px solid #aaa;
+                            }
+                            .pink {
+                                background: pink;
+                            }
+                            .active{
+                                border: 1px solid $heading-color;
+                            }
+                        }
+                    }
+                }
+                .size{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    margin: 195px 0 0 0;
+                    border-top: 1px dashed $border-color;
+                    padding: 30px 0;
+                    .select_size{
+                        h6{
+                            color: #222;
+                            font-size: 14px;
+                            text-transform: capitalize;
+                            font-weight: 700;
+                            margin-bottom: 30px;
+                        }
+                        span{
+                            text-transform: uppercase;
+                            padding: 10px 15px;
+                            border-radius: 50%;
+                            border: 1px solid #f7f7f7;
+                            cursor: pointer;
+                        }
+                    }
+                    .size_chart{
+                        a{
+                            // color: #222;
+                            font-size: 14px;
+                            text-transform: capitalize;
+                            font-weight: 700;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .in_stock{
+                    h5{
+                        font-size: 15px;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        color: $theme-default;
+                    }
+                }
+                .button{
+                    display: flex;
+                    gap: 10px;
+                    border-bottom: 1px dashed $border-color;
+                    padding-bottom: 20px ;
+                    a{
+                        @include btn-solid;
+                        line-height: 20px;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+                .product_details{
+                    border-bottom: 1px dashed $border-color;
+                    padding-bottom: 20px ;
+                    h5{
+                        margin-top: 20px;
+                        font-size: 14px;
+                        font-weight: 700;
+                        text-transform: capitalize;
+                        color: $heading-color; 
+                    }
+                    .icons{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        i{
+                            font-size: 20px;
+                            cursor: pointer;
+                            &:hover{
+                                color: $theme-default;
+                            }
+                        }
+                        .fa-heart{
+                            border-left: 1px solid $border-color;
+                            padding-left: 10px;
+                        }
+                        a{
+                            padding-left: 10px;
+                            font-size: 18px;
+                            color: $heading-color;
+                        }
+                    }
+                }
+                .twelve{
+                    margin-top: 70px;
+                    .nav-pills{
+                        border-bottom: 1px solid $border-color;
+                        .nav-link{
+                            padding: 0 15px 20px;
+                            border-radius: 0;
+                            color: #212121;
+                        }
+                        .nav-link.active{
+                            color: $theme-default;
+                            background-color: transparent;
+                            border-bottom: 2px solid $theme-default;
+                        }
+                    }
+                    .tab-content{
+                        .active{
+                            color: $para-color;
+                            font-size: 14px;
+                            line-height: 26px;
+                            letter-spacing: .01em;
+                            iframe {
+                                border: 0;
+                                text-align: center;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0 auto;
+                            }
+                            form{
+                                .media{
+                                    display: flex;
+                                    .form{
+                                        display: flex; 
+                                        gap: 20px;                                   
+                                        .input{
+                                        label{
+                                            color: $heading-color;
+                                            font-size: 14px;
+                                            font-weight: 400;
+                                        }
+                                        width: 50%;
+                                        .form-control {
+                                            display: block;
+                                            width: 100%;
+                                            padding: 20px 25px;
+                                            font-size: 1rem;
+                                            font-weight: 400;
+                                            line-height: 1.5;
+                                            color: #212529;
+                                            background-color: #fff;
+                                            background-clip: padding-box;
+                                            border: 1px solid #ced4da;
+                                            -webkit-appearance: none;
+                                            -moz-appearance: none;
+                                            appearance: none;
+                                            border-radius: 0;
+                                            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                                            &::placeholder{
+                                                color: $para-color;
+                                                font-size: 14px
+                                            }
+                                        }
+                                        }
+                                    }
+                                    i{
+                                        color: $review-star;
+                                    }                                
+                                }
+                                .input{
+                                    label{
+                                        color: $heading-color;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                    }
+                                    .form-control {
+                                        display: block;
+                                        width: 100%;
+                                        padding: 20px 25px;
+                                        font-size: 1rem;
+                                        font-weight: 400;
+                                        line-height: 1.5;
+                                        color: #212529;
+                                        background-color: #fff;
+                                        background-clip: padding-box;
+                                        border: 1px solid #ced4da;
+                                        -webkit-appearance: none;
+                                        -moz-appearance: none;
+                                        appearance: none;
+                                        border-radius: 0;
+                                        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                                        &::placeholder{
+                                            color: $para-color;
+                                            font-size: 14px
+                                        }
+                                    }
+                                    textarea.form-control {
+                                        display: block;
+                                        width: 100%;
+                                        padding: 20px 25px;
+                                        font-size: 1rem;
+                                        font-weight: 400;
+                                        line-height: 1.5;
+                                        color: #212529;
+                                        background-color: transparent;
+                                        background-clip: padding-box;
+                                        border: 1px solid #ced4da;
+                                        -webkit-appearance: none;
+                                        -moz-appearance: none;
+                                        appearance: none;
+                                        border-radius: 0;
+                                        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                                        &::placeholder{
+                                            color: $para-color;
+                                            font-size: 14px
+                                        }
+                                    }
+                                }
+                                button{
+                                    @include btn-solid;
+                                    text-transform: uppercase;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*===================================================
+                Product_left_sidebar Part Start
+=================================================== */

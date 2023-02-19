@@ -147,12 +147,11 @@ header{
     }
 // Navbar Start
     #navbar{
-        background: transparent;
-        // padding: 30px 0;
-        /* position: absolute; */
+        background: #fff;
+        padding: 0;
         width: 100%;
-        // top: 0;
-        // transition: all linear 1.5s;
+        z-index: 100;
+        transition: $transition;
         .nav_container{
             position: relative;
             .btn {
@@ -371,6 +370,23 @@ header{
             }
         }
     }
+    #navbar.sticky {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        background: $top-menu-color;
+        box-shadow: 0 0 8px #ddd;
+        padding: 10px 0;
+        animation: sticky 1.5s linear alternate;
+    }
+    @keyframes sticky {
+        0% {
+            top: -100%;
+        }
+        100% {
+            top: 0;
+        }
+    }
 // Navbar End
 }
 .offcanvas{
@@ -506,7 +522,7 @@ header{
                     cursor: pointer;
                     .side_mega_menu{
                         opacity: 1;
-                        visibility: visible;
+                        visibility: hidden;
                         transition: $transition;
                     }
                 }

@@ -1,0 +1,182 @@
+@import '../variable/_variable';
+@import '../mixin/mixin';
+/*===================================================
+                Product_left_sidebar Part Start
+=================================================== */
+#blog_left_sidebar{
+    .blog_left_container{
+        .blog_left_row{
+            .nine{
+                .blog_media{
+                    margin-bottom: 30px;
+                    .blog_left{
+                        img{
+                            object-fit: cover;
+                            margin-bottom: 40px;
+                        }
+                    }
+                    .blog_right{
+                        justify-content: center;
+                        display: flex;
+                        flex-direction: column;
+                        h4{
+                            color: #222;
+                            font-weight: 700;
+                            font-size: 24px;
+                            text-transform: capitalize;
+                            margin-bottom: 20px;
+                        }
+                        ul{
+                            display: flex;
+                            margin-bottom: 15px;
+                            padding-bottom: 15px;
+                            border-bottom: 1px solid $border-color;
+                            li{
+                                font-size: 14px;
+                                line-height: 1.5;
+                                color: $para-color;
+                                padding-left: 15px;
+                                margin-left: 15px;
+                                border-left: 1px solid #dddddd;
+                                i{
+                                    font-size: 14px;
+                                    padding-right: 3px;
+                                    color: $para-color;
+                                }
+                            }
+                            li.p_none{
+                                padding: 0;
+                                margin: 0;
+                                border: none;
+                            }
+                        }
+                        p{
+                            line-height: 1.8;
+                            letter-spacing: .04em;
+                        }
+                    }
+                }
+            }
+        }
+        .blog_advanced{
+            padding-bottom: 70px;
+            .image{
+                img{
+                    margin: 25px 0;
+                }
+            }
+            .text{
+                ul{
+                    padding: 0 0 0 16px;
+                    li{
+                        line-height: 2.5;
+                        font-size: 15px;
+                        font-weight: 700;
+                        text-transform: capitalize;
+                        display: list-item;
+                        list-style: auto;
+                    }
+                }
+                p{
+                    line-height: 1.8;
+                    letter-spacing: .04em;
+                }
+            }
+        }
+        .comment_row{
+            padding-bottom: 70px;
+            .comment{
+                ul{
+                    li{
+                        padding-top: 60px;
+                        padding-bottom: 60px;
+                        border-top: 1px solid #dddddd;
+                        .media{
+                            display: flex;
+                            .image{
+                                height: 65px;
+                                width: 240px;
+                                margin-right: 20px;
+                                border-radius: 100%;
+                                overflow: hidden;
+                                img{
+                                }
+                            }
+                            .text{
+                                h6{
+                                    color: #444;
+                                    text-transform: uppercase;
+                                    font-weight: 700;
+                                    margin-bottom: 5px;
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                    span{
+                                        font-size: 13px;
+                                        font-weight: 500;
+                                        text-transform: capitalize;
+                                        color: #777;
+                                        margin-left: 20px;
+                                    }
+                                }
+                                p{
+                                    line-height: 1.8;
+                                    margin-bottom: -4px;
+                                    letter-spacing: .09em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .form_row{
+            padding-bottom: 70px;
+            h2{
+                margin-bottom: 30px;
+                font-size: 32px;
+                color: $heading-color;
+                text-transform: uppercase;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: .02em;
+            }
+            form{
+                label{
+                    text-transform: capitalize;
+                    color: #333;
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+                input{
+                    padding: 17px 25px;
+                    border-radius: 0;
+                    &::placeholder{
+                        font-size: 14px;
+                    }
+                }
+                textarea{
+                    padding: 17px 25px;
+                    border-radius: 0;
+                    &::placeholder{
+                        font-size: 14px;
+                    }
+                }
+                .form-control:focus {
+                    color: #212529;
+                    background-color: #fff;
+                    border-color: 0;
+                    outline: 0;
+                    box-shadow: none;
+                }
+                button{
+                    @include btn-solid;
+                    @include btn;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
+/*===================================================
+                Product_left_sidebar Part Start
+=================================================== */
