@@ -42,7 +42,23 @@ $(function () {
         dots: false,
         slidesToShow: 3,
         slidesToScroll: 3,
-        draggable: true
+        draggable: true,
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 444,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
     });
     // Product Slider start
     $('.product_slider').slick({
@@ -51,6 +67,31 @@ $(function () {
       arrows: false,
       draggable: true,
       infinite: false,
+      responsive: [
+        // {
+        //   breakpoint: 1024,
+        //   settings: {
+        //     slidesToShow: 3,
+        //     slidesToScroll: 3,
+        //     infinite: true,
+        //     dots: true
+        //   }
+        // },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 444,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
     //Product Slider end
     // brand Slider start
@@ -59,8 +100,22 @@ $(function () {
       slidesToScroll: 4,
       arrows: false,
       draggable: true,
-      // centerMode: true,
-      // centerPadding: '60px',
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 444,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
     //brand Slider end
     // Product left Slider start

@@ -110,7 +110,7 @@
                                     height: 100%;
                                     vertical-align: middle;
                                     color: black;
-                                    fill: red;
+                                    fill: $theme-default;
                                 }
                             }
                             .text{
@@ -600,3 +600,70 @@
 /*===================================================
                 Product_left_sidebar Part Start
 =================================================== */
+/*===================================================
+                Product_left_sidebar dark mood Part Start
+=================================================== */
+.dark #product_left_sidebar .product_left_container .product_left_row .nine .product_item .product_text .text p{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .nine .product_item .product_text .text h4 .price{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .new_product .new_product_slider .slider_item ul li .text h6{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .new_product .new_product_slider .slider_item ul li .text p span{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .new_product h5{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .new_product .prev_arrow{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .new_product .next_arrow{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .nine .twelve .nav-pills .nav-link{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .nine .product_details h5{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .nine .size .select_size h6{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .nine .product_details .icons a{
+    color: #f7f7f7;
+}
+.dark #product_top_collection .container .section_heading h3{
+    color: #f7f7f7;
+}
+.dark #product_top_collection .container .row .col-lg-2 .product_top_collection_item .text_box .text h4{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .shipping ul li .media .text h4{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .shipping ul li .media .text p{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .shipping ul li .media .image svg{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .category .accordion .accordion-item{
+    background: $paragraph_clr;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .category .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed){
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .category .accordion .accordion-item .accordion-header .accordion-button{
+    background: $paragraph_clr;
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .category .accordion .accordion-item .accordion-header .accordion-button::after{
+    color: #f7f7f7;
+}
+.dark #product_left_sidebar .product_left_container .product_left_row .category .accordion .accordion-item .accordion-collapse .accordion-body ul li a {
+    color: #c3c0c0;
+}

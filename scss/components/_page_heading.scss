@@ -48,3 +48,18 @@
 /*===================================================
                 Page_heading Part Start
 =================================================== */
+/*===================================================
+                Page_heading Part dark mood Start
+=================================================== */
+.dark #page_heading{
+    background-color: #232323;
+}
+.dark #page_heading .page_container .page_row .page_col h3 {
+    color: #f1f3f5;
+}
+.dark #page_heading .page_container .page_row .page_col p a{
+    color: #f1f3f5;
+}
+.dark #page_heading .page_container .page_row .page_col p span{
+    color: #f1f3f5;
+}

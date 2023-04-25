@@ -40,12 +40,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.03em;
 }
 
-.dark h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
-  font-family: "Lato", sans-serif;
-  color: #222;
-}
-
 img {
   vertical-align: middle;
 }
@@ -57,6 +51,11 @@ section {
 p {
   font-size: 14px;
   color: #777;
+}
+
+.dark p {
+  font-size: 14px;
+  color: #cfd4da;
 }
 
 /*======================================
@@ -216,6 +215,80 @@ p {
               Theme Feature End              
 ========================================*/
 /* All Common css End */
+/*Messanger part start*/
+.Messanger {
+  position: relative;
+}
+.Messanger .messanger_icon {
+  width: 60px;
+  height: 60px;
+  background-color: #ff4c3b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 35px;
+  right: 16px;
+  z-index: 9999;
+}
+.Messanger .messanger_icon .messanger_form {
+  width: 400px;
+  height: 400px;
+  border-radius: 25px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 20px;
+  right: 90px;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all linear 0.3s;
+}
+.Messanger .messanger_icon .messanger_form .messanger_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Messanger .messanger_icon .messanger_form .heading_text h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  padding: 20px 0;
+}
+.Messanger .messanger_icon .messanger_form .heading_text p {
+  color: #000;
+  font-size: 15px;
+  line-height: 20px;
+}
+.Messanger .messanger_icon .messanger_form .heading_text button {
+  width: 100%;
+  background-color: rgb(255, 76, 59);
+  color: #fff;
+  cursor: pointer;
+  padding: 0 30px 0 30px;
+  border-radius: 16px;
+  font-weight: 600;
+  min-height: 54px;
+  border: none;
+  margin-top: 30px;
+}
+.Messanger .messanger_icon .messanger_form .powerd_by {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.Messanger .messanger_icon .messanger_form .powerd_by h6 {
+  margin-bottom: 0;
+}
+.Messanger .messanger_icon:hover .messanger_form {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*Messanger part end*/
 /* bottom to top ----------*/
 .toping {
   width: 50px;
@@ -253,7 +326,7 @@ p {
 .toping.top {
   opacity: 1;
   visibility: visible;
-  bottom: 12%;
+  bottom: 20%;
 }
 
 /*======================================
@@ -400,13 +473,18 @@ header #navbar .nav_container .btn {
 }
 header #navbar .nav_container .btn-primary {
   background: transparent;
-  padding: 40px 45px 40px 0;
 }
 header #navbar .nav_container .btn-primary i {
   color: #222;
   cursor: pointer;
   font-size: 24px;
   vertical-align: middle;
+}
+header #navbar .nav_container .left_menu {
+  padding: 40px 45px 40px 0;
+}
+header #navbar .nav_container .small_device_menu .right_menu_icon {
+  color: #ff4c3b;
 }
 header #navbar .nav_container ul li {
   margin-left: 8px;
@@ -613,6 +691,9 @@ header #navbar.sticky {
   100% {
     top: 0;
   }
+}
+header .mobile_menu {
+  display: none;
 }
 
 .offcanvas .border-bottom {
@@ -823,6 +904,92 @@ header #navbar.sticky {
   visibility: visible;
 }
 
+/*dark mode start*/
+.dark header #top_menu {
+  background-color: #232323;
+}
+
+.dark header #navbar {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar.sticky_menu {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar.sticky {
+  box-shadow: 0 0 8px #313131;
+}
+
+.dark header #navbar ul li a {
+  color: #f1f3f5;
+}
+
+.dark header #navbar ul li i {
+  color: #f1f3f5;
+}
+
+.dark header #navbar .nav_container ul li a img {
+  filter: brightness(100);
+}
+
+.dark header #navbar .offcanvas_btn i {
+  color: #ffffff;
+}
+
+.dark header #navbar .nav_container ul li .drop_down {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar .nav_container ul li .drop_down li ul {
+  background: #2d2d2d;
+}
+
+.dark header #navbar .nav_container ul li .mega_menu {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar .nav_container ul li .mega_menu ul li h4 {
+  color: #ffffff;
+}
+
+.dark .offcanvas {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_header {
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu .clothing_maga_menu .clothing_item a {
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu h4 {
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu .side_drop_down .side_dropdown_item a {
+  color: #ffffff !important;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu .side_drop_down .side_dropdown_item #Thirdside_dropdown_menu {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+}
+
+/*dark mode end*/
 /*======================================
               Navbar Start              
 ========================================*/
@@ -1254,6 +1421,21 @@ header #navbar.sticky {
                 top collection Part Start
 =================================================== */
 /*===================================================
+                top collection Part dark mood Start
+=================================================== */
+.dark #top_collection .container .section_heading h3 {
+  color: #f1f3f5;
+}
+
+.dark #top_collection .container .section_heading h5 {
+  color: #f1f3f5;
+}
+
+.dark #top_collection .container .section_heading p {
+  color: #f1f3f5;
+}
+
+/*===================================================
                 Special Offer Part Start
 =================================================== */
 #special_offer {
@@ -1549,6 +1731,40 @@ header #navbar.sticky {
                 special_products Part Start
 =================================================== */
 /*===================================================
+                special_products Part Dark Mood Start
+=================================================== */
+.dark #special_products .container .section_heading h3 {
+  color: #f1f3f5;
+}
+
+.dark #special_products .container .section_heading h5 {
+  color: #f1f3f5;
+}
+
+.dark #special_products .container .section_heading p {
+  color: #f1f3f5;
+}
+
+.dark #special_products .container .special_product_container ul li .active {
+  color: #ff4c3b;
+}
+
+.dark #special_products .container .special_product_container ul li button {
+  color: #f1f3f5;
+}
+
+.dark #special_products .container .special_product_container .product_top_collection_item .text_box .text p {
+  color: #f1f3f5;
+}
+
+.dark #special_products .container .special_product_container .product_top_collection_item .text_box .text h4 {
+  font-size: 18px;
+  color: #f1f3f5;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+/*===================================================
                 special_products Part Start
 =================================================== */
 #service .container {
@@ -1609,6 +1825,17 @@ header #navbar.sticky {
 /*===================================================
                 special_products Part Start
 =================================================== */
+/*===================================================
+                special_products Part Dark Mood Start
+=================================================== */
+.dark #service .container .row .col-lg-4 .service_item .text h5 {
+  color: #f1f3f5;
+}
+
+.dark #service .container .row .col-lg-4 .service_item .text p {
+  color: #b5b0b0;
+}
+
 /*===================================================
                 special_products Part Start
 =================================================== */
@@ -1730,6 +1957,33 @@ header #navbar.sticky {
                 special_products Part Start
 =================================================== */
 /*===================================================
+                special_products Part Dark Mood Start
+=================================================== */
+.dark #blog .container .section_heading h3 {
+  color: #f1f3f5;
+}
+
+.dark #blog .container .section_heading h5 {
+  color: #f1f3f5;
+}
+
+.dark #blog .container .blog_items .col-lg-3 .items .text h5 {
+  color: #f1f3f5;
+}
+
+.dark #blog .container .blog_items .col-lg-3 .items .text h3 {
+  color: #f1f3f5;
+}
+
+.dark #blog .container .blog_items .col-lg-3 .items .text h3::after {
+  background: #f1f3f5;
+}
+
+.dark #blog .container .blog_items .col-lg-3 .items .text p {
+  color: #f1f3f5;
+}
+
+/*===================================================
                 brand Part Start
 =================================================== */
 #brand {
@@ -1757,6 +2011,14 @@ header #navbar.sticky {
 /*===================================================
                 brand Part Start
 =================================================== */
+/*===================================================
+                brand Part Dark Mood Start
+=================================================== */
+.dark #brand .container .row .col-lg-3 a img {
+  filter: invert(100);
+  transition: all linear 0.5s;
+}
+
 /*===================================================
                 Footer Part Start
 =================================================== */
@@ -1973,6 +2235,35 @@ footer .powered .container .image {
 /*===================================================
                 Footer Part Start
 =================================================== */
+/*===================================================
+                Footer Part Dark Mood Start
+=================================================== */
+.dark footer {
+  background: #222;
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .subscribe .row .news_text h4 {
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .middle .categories h4 {
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .middle .choose h4 {
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .middle .address h4 {
+  color: #cfd4da;
+}
+
+.dark footer .powered {
+  background: #222;
+  color: #cfd4da;
+}
+
 /*======================================
               Navbar Start              
 ========================================*/
@@ -2117,13 +2408,18 @@ header #navbar .nav_container .btn {
 }
 header #navbar .nav_container .btn-primary {
   background: transparent;
-  padding: 40px 45px 40px 0;
 }
 header #navbar .nav_container .btn-primary i {
   color: #222;
   cursor: pointer;
   font-size: 24px;
   vertical-align: middle;
+}
+header #navbar .nav_container .left_menu {
+  padding: 40px 45px 40px 0;
+}
+header #navbar .nav_container .small_device_menu .right_menu_icon {
+  color: #ff4c3b;
 }
 header #navbar .nav_container ul li {
   margin-left: 8px;
@@ -2330,6 +2626,9 @@ header #navbar.sticky {
   100% {
     top: 0;
   }
+}
+header .mobile_menu {
+  display: none;
 }
 
 .offcanvas .border-bottom {
@@ -2540,6 +2839,92 @@ header #navbar.sticky {
   visibility: visible;
 }
 
+/*dark mode start*/
+.dark header #top_menu {
+  background-color: #232323;
+}
+
+.dark header #navbar {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar.sticky_menu {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar.sticky {
+  box-shadow: 0 0 8px #313131;
+}
+
+.dark header #navbar ul li a {
+  color: #f1f3f5;
+}
+
+.dark header #navbar ul li i {
+  color: #f1f3f5;
+}
+
+.dark header #navbar .nav_container ul li a img {
+  filter: brightness(100);
+}
+
+.dark header #navbar .offcanvas_btn i {
+  color: #ffffff;
+}
+
+.dark header #navbar .nav_container ul li .drop_down {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar .nav_container ul li .drop_down li ul {
+  background: #2d2d2d;
+}
+
+.dark header #navbar .nav_container ul li .mega_menu {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar .nav_container ul li .mega_menu ul li h4 {
+  color: #ffffff;
+}
+
+.dark .offcanvas {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_header {
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu .clothing_maga_menu .clothing_item a {
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu h4 {
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu .side_drop_down .side_dropdown_item a {
+  color: #ffffff !important;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu .side_drop_down .side_dropdown_item #Thirdside_dropdown_menu {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+}
+
+/*dark mode end*/
 /*======================================
               Navbar Start              
 ========================================*/
@@ -2588,6 +2973,25 @@ header #navbar.sticky {
 /*===================================================
                 Page_heading Part Start
 =================================================== */
+/*===================================================
+                Page_heading Part dark mood Start
+=================================================== */
+.dark #page_heading {
+  background-color: #232323;
+}
+
+.dark #page_heading .page_container .page_row .page_col h3 {
+  color: #f1f3f5;
+}
+
+.dark #page_heading .page_container .page_row .page_col p a {
+  color: #f1f3f5;
+}
+
+.dark #page_heading .page_container .page_row .page_col p span {
+  color: #f1f3f5;
+}
+
 /*===================================================
                 Product_left_sidebar Part Start
 =================================================== */
@@ -2688,7 +3092,7 @@ header #navbar.sticky {
   height: 100%;
   vertical-align: middle;
   color: black;
-  fill: red;
+  fill: #ff4c3b;
 }
 #product_left_sidebar .product_left_container .product_left_row .shipping ul li .media .text {
   padding: 0 15px;
@@ -3172,6 +3576,94 @@ header #navbar.sticky {
                 Product_left_sidebar Part Start
 =================================================== */
 /*===================================================
+                Product_left_sidebar dark mood Part Start
+=================================================== */
+.dark #product_left_sidebar .product_left_container .product_left_row .nine .product_item .product_text .text p {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .nine .product_item .product_text .text h4 .price {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .new_product .new_product_slider .slider_item ul li .text h6 {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .new_product .new_product_slider .slider_item ul li .text p span {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .new_product h5 {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .new_product .prev_arrow {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .new_product .next_arrow {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .nine .twelve .nav-pills .nav-link {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .nine .product_details h5 {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .nine .size .select_size h6 {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .nine .product_details .icons a {
+  color: #f7f7f7;
+}
+
+.dark #product_top_collection .container .section_heading h3 {
+  color: #f7f7f7;
+}
+
+.dark #product_top_collection .container .row .col-lg-2 .product_top_collection_item .text_box .text h4 {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .shipping ul li .media .text h4 {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .shipping ul li .media .text p {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .shipping ul li .media .image svg {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .category .accordion .accordion-item {
+  background: #2d2d2d;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .category .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .category .accordion .accordion-item .accordion-header .accordion-button {
+  background: #2d2d2d;
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .category .accordion .accordion-item .accordion-header .accordion-button::after {
+  color: #f7f7f7;
+}
+
+.dark #product_left_sidebar .product_left_container .product_left_row .category .accordion .accordion-item .accordion-collapse .accordion-body ul li a {
+  color: #c3c0c0;
+}
+
+/*===================================================
              Product top collection Part Start
 =================================================== */
 #product_top_collection {
@@ -3578,6 +4070,35 @@ footer .powered .container .image {
 /*===================================================
                 Footer Part Start
 =================================================== */
+/*===================================================
+                Footer Part Dark Mood Start
+=================================================== */
+.dark footer {
+  background: #222;
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .subscribe .row .news_text h4 {
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .middle .categories h4 {
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .middle .choose h4 {
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .middle .address h4 {
+  color: #cfd4da;
+}
+
+.dark footer .powered {
+  background: #222;
+  color: #cfd4da;
+}
+
 /* bottom to top ----------*/
 .toping {
   width: 50px;
@@ -3615,7 +4136,7 @@ footer .powered .container .image {
 .toping.top {
   opacity: 1;
   visibility: visible;
-  bottom: 12%;
+  bottom: 20%;
 }
 
 /*======================================
@@ -3762,13 +4283,18 @@ header #navbar .nav_container .btn {
 }
 header #navbar .nav_container .btn-primary {
   background: transparent;
-  padding: 40px 45px 40px 0;
 }
 header #navbar .nav_container .btn-primary i {
   color: #222;
   cursor: pointer;
   font-size: 24px;
   vertical-align: middle;
+}
+header #navbar .nav_container .left_menu {
+  padding: 40px 45px 40px 0;
+}
+header #navbar .nav_container .small_device_menu .right_menu_icon {
+  color: #ff4c3b;
 }
 header #navbar .nav_container ul li {
   margin-left: 8px;
@@ -3975,6 +4501,9 @@ header #navbar.sticky {
   100% {
     top: 0;
   }
+}
+header .mobile_menu {
+  display: none;
 }
 
 .offcanvas .border-bottom {
@@ -4185,6 +4714,92 @@ header #navbar.sticky {
   visibility: visible;
 }
 
+/*dark mode start*/
+.dark header #top_menu {
+  background-color: #232323;
+}
+
+.dark header #navbar {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar.sticky_menu {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar.sticky {
+  box-shadow: 0 0 8px #313131;
+}
+
+.dark header #navbar ul li a {
+  color: #f1f3f5;
+}
+
+.dark header #navbar ul li i {
+  color: #f1f3f5;
+}
+
+.dark header #navbar .nav_container ul li a img {
+  filter: brightness(100);
+}
+
+.dark header #navbar .offcanvas_btn i {
+  color: #ffffff;
+}
+
+.dark header #navbar .nav_container ul li .drop_down {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar .nav_container ul li .drop_down li ul {
+  background: #2d2d2d;
+}
+
+.dark header #navbar .nav_container ul li .mega_menu {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar .nav_container ul li .mega_menu ul li h4 {
+  color: #ffffff;
+}
+
+.dark .offcanvas {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_header {
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu .clothing_maga_menu .clothing_item a {
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu h4 {
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu .side_drop_down .side_dropdown_item a {
+  color: #ffffff !important;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu .side_drop_down .side_dropdown_item #Thirdside_dropdown_menu {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+}
+
+/*dark mode end*/
 /*======================================
               Navbar Start              
 ========================================*/
@@ -4233,6 +4848,25 @@ header #navbar.sticky {
 /*===================================================
                 Page_heading Part Start
 =================================================== */
+/*===================================================
+                Page_heading Part dark mood Start
+=================================================== */
+.dark #page_heading {
+  background-color: #232323;
+}
+
+.dark #page_heading .page_container .page_row .page_col h3 {
+  color: #f1f3f5;
+}
+
+.dark #page_heading .page_container .page_row .page_col p a {
+  color: #f1f3f5;
+}
+
+.dark #page_heading .page_container .page_row .page_col p span {
+  color: #f1f3f5;
+}
+
 /*===================================================
                 Product_left_sidebar Part Start
 =================================================== */
@@ -4391,8 +5025,39 @@ header #navbar.sticky {
 }
 
 /*===================================================
-                Product_left_sidebar Part Start
+                blog Part End
 =================================================== */
+/*===================================================
+                blog Part dark mood End
+=================================================== */
+.dark #blog_left_sidebar .blog_left_container .blog_left_row .shipping h3 {
+  color: #f1f3f5;
+}
+
+.dark #blog_left_sidebar .blog_left_container .blog_left_row .popular_blog h3 {
+  color: #f1f3f5;
+}
+
+.dark #blog_left_sidebar .blog_left_container .blog_left_row .shipping ul li .media .text h6 {
+  color: #f1f3f5;
+}
+
+.dark #blog_left_sidebar .blog_left_container .blog_left_row .popular_blog ul li .media .text h6 {
+  color: #f1f3f5;
+}
+
+.dark #blog_left_sidebar .blog_left_container .blog_left_row .popular_blog ul li .media .text p {
+  color: #cfd4da;
+}
+
+.dark #blog_left_sidebar .blog_left_container .blog_left_row .nine .blog_media .blog_right a h4 {
+  color: #f1f3f5;
+}
+
+#blog_left_sidebar .blog_left_container .blog_left_row .nine .blog_media .blog_right h6 {
+  color: #f1f3f5;
+}
+
 /*===================================================
                 Footer Part Start
 =================================================== */
@@ -4609,6 +5274,35 @@ footer .powered .container .image {
 /*===================================================
                 Footer Part Start
 =================================================== */
+/*===================================================
+                Footer Part Dark Mood Start
+=================================================== */
+.dark footer {
+  background: #222;
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .subscribe .row .news_text h4 {
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .middle .categories h4 {
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .middle .choose h4 {
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .middle .address h4 {
+  color: #cfd4da;
+}
+
+.dark footer .powered {
+  background: #222;
+  color: #cfd4da;
+}
+
 /* bottom to top ----------*/
 .toping {
   width: 50px;
@@ -4646,7 +5340,7 @@ footer .powered .container .image {
 .toping.top {
   opacity: 1;
   visibility: visible;
-  bottom: 12%;
+  bottom: 20%;
 }
 
 /*======================================
@@ -4793,13 +5487,18 @@ header #navbar .nav_container .btn {
 }
 header #navbar .nav_container .btn-primary {
   background: transparent;
-  padding: 40px 45px 40px 0;
 }
 header #navbar .nav_container .btn-primary i {
   color: #222;
   cursor: pointer;
   font-size: 24px;
   vertical-align: middle;
+}
+header #navbar .nav_container .left_menu {
+  padding: 40px 45px 40px 0;
+}
+header #navbar .nav_container .small_device_menu .right_menu_icon {
+  color: #ff4c3b;
 }
 header #navbar .nav_container ul li {
   margin-left: 8px;
@@ -5006,6 +5705,9 @@ header #navbar.sticky {
   100% {
     top: 0;
   }
+}
+header .mobile_menu {
+  display: none;
 }
 
 .offcanvas .border-bottom {
@@ -5216,6 +5918,92 @@ header #navbar.sticky {
   visibility: visible;
 }
 
+/*dark mode start*/
+.dark header #top_menu {
+  background-color: #232323;
+}
+
+.dark header #navbar {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar.sticky_menu {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar.sticky {
+  box-shadow: 0 0 8px #313131;
+}
+
+.dark header #navbar ul li a {
+  color: #f1f3f5;
+}
+
+.dark header #navbar ul li i {
+  color: #f1f3f5;
+}
+
+.dark header #navbar .nav_container ul li a img {
+  filter: brightness(100);
+}
+
+.dark header #navbar .offcanvas_btn i {
+  color: #ffffff;
+}
+
+.dark header #navbar .nav_container ul li .drop_down {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar .nav_container ul li .drop_down li ul {
+  background: #2d2d2d;
+}
+
+.dark header #navbar .nav_container ul li .mega_menu {
+  background-color: #2d2d2d;
+}
+
+.dark header #navbar .nav_container ul li .mega_menu ul li h4 {
+  color: #ffffff;
+}
+
+.dark .offcanvas {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_header {
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu .clothing_maga_menu .clothing_item a {
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu h4 {
+  color: #ffffff;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu .side_drop_down .side_dropdown_item a {
+  color: #ffffff !important;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu .side_drop_down .side_dropdown_item #Thirdside_dropdown_menu {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+}
+
+/*dark mode end*/
 /*======================================
               Navbar Start              
 ========================================*/
@@ -5265,7 +6053,26 @@ header #navbar.sticky {
                 Page_heading Part Start
 =================================================== */
 /*===================================================
-                Product_left_sidebar Part Start
+                Page_heading Part dark mood Start
+=================================================== */
+.dark #page_heading {
+  background-color: #232323;
+}
+
+.dark #page_heading .page_container .page_row .page_col h3 {
+  color: #f1f3f5;
+}
+
+.dark #page_heading .page_container .page_row .page_col p a {
+  color: #f1f3f5;
+}
+
+.dark #page_heading .page_container .page_row .page_col p span {
+  color: #f1f3f5;
+}
+
+/*===================================================
+                Blog details Part Start
 =================================================== */
 #blog_left_sidebar .blog_left_container .blog_left_row .nine .blog_media {
   margin-bottom: 30px;
@@ -5449,8 +6256,27 @@ header #navbar.sticky {
 }
 
 /*===================================================
-                Product_left_sidebar Part Start
+                Blog deatails Part End
 =================================================== */
+/*===================================================
+                Blog deatails Part Dark Mood Start
+=================================================== */
+.dark #blog_left_sidebar .blog_left_container .blog_left_row .nine .blog_media .blog_right h4 {
+  color: #f1f3f5;
+}
+
+.dark #blog_left_sidebar .blog_left_container .comment_row .comment ul li .media .text h6 {
+  color: #f1f3f5;
+}
+
+.dark #blog_left_sidebar .blog_left_container .comment_row .comment ul li .media .text h6 span {
+  color: #f1f3f5;
+}
+
+.dark #blog_left_sidebar .blog_left_container .form_row h2 {
+  color: #f1f3f5;
+}
+
 /*===================================================
                 Footer Part Start
 =================================================== */
@@ -5666,4 +6492,32 @@ footer .powered .container .image {
 
 /*===================================================
                 Footer Part Start
-=================================================== *//*# sourceMappingURL=style.css.map */
+=================================================== */
+/*===================================================
+                Footer Part Dark Mood Start
+=================================================== */
+.dark footer {
+  background: #222;
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .subscribe .row .news_text h4 {
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .middle .categories h4 {
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .middle .choose h4 {
+  color: #cfd4da;
+}
+
+.dark footer .footer_container .middle .address h4 {
+  color: #cfd4da;
+}
+
+.dark footer .powered {
+  background: #222;
+  color: #cfd4da;
+}/*# sourceMappingURL=style.css.map */

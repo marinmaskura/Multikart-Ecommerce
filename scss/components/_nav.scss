@@ -160,7 +160,7 @@ header{
             }
             .btn-primary {
                 background: transparent;
-                padding: 40px 45px 40px 0;
+                // padding: 40px 45px 40px 0;
                 i {
                     color: $heading-color;
                     cursor: pointer;
@@ -168,7 +168,14 @@ header{
                     vertical-align: middle;
                 }
             }
-            
+            .left_menu {
+                padding: 40px 45px 40px 0;
+            }
+            .small_device_menu {
+                .right_menu_icon{
+                    color: $theme-default;
+                }
+            }
             ul{
                 li{
                     margin-left: 8px;
@@ -388,6 +395,11 @@ header{
         }
     }
 // Navbar End
+        // mobile Bottom menu Start
+        .mobile_menu{
+            display: none;
+        }
+        // mobile Bottom menu end
 }
 .offcanvas{
     .border-bottom {
@@ -615,6 +627,84 @@ header{
 //     border-right: 0;
 //     transform: translateX(-100%);
 // }
+
+  /*dark mode start*/ 
+.dark  header #top_menu{ 
+    background-color: #232323;  
+}
+.dark header #navbar { 
+    background-color: $paragraph_clr;  
+}
+
+.dark header #navbar.sticky_menu {
+    background-color: $paragraph_clr;
+}
+.dark header #navbar.sticky {
+    box-shadow: 0 0 8px #313131;
+}
+.dark header #navbar ul li a {
+    color: #f1f3f5;
+}
+.dark header #navbar ul li i {
+    color: #f1f3f5;
+}
+.dark header #navbar .nav_container ul li a img {
+    filter: brightness(100);
+}
+.dark header #navbar .offcanvas_btn i{
+    color: $white;
+}
+
+.dark header #navbar .nav_container ul li .drop_down {
+    background-color: $paragraph_clr;
+   
+}
+.dark header #navbar .nav_container ul li .drop_down li ul{
+    background: $paragraph_clr;
+}
+.dark header #navbar .nav_container ul li .mega_menu {
+    background-color: $paragraph_clr;
+}
+
+.dark header #navbar .nav_container ul li .mega_menu ul li h4 {
+    color: $white;
+}
+
+.dark .offcanvas {
+    background-color: $paragraph_clr;
+    color: $white;
+}
+.dark .offcanvas_left_header {
+    color: $white;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu {
+    background-color: $paragraph_clr;
+    color: $white;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu .clothing_maga_menu .clothing_item a {
+    color: $white;
+}
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_maga_menu h4 {
+    color: $white;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu {
+    background-color: $paragraph_clr !important;
+    color: $white !important;
+}
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu .side_drop_down .side_dropdown_item a {
+    color: $white !important;
+} 
+
+.dark .offcanvas_left_body .Left_side_menu .side_item #side_dropdown_menu .side_drop_down .side_dropdown_item #Thirdside_dropdown_menu {
+    background-color: $paragraph_clr !important;
+    color: $white !important;
+}
+
+ /*dark mode end*/ 
 /*======================================
               Navbar Start              
 ========================================*/

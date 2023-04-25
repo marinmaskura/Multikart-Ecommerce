@@ -34,11 +34,6 @@ h1,h2,h3,h4,h5,h6 {
     color: $heading-color;
     letter-spacing: .03em;
 }
-.dark h1,h2,h3,h4,h5,h6 {
-    font-weight: 400;
-    font-family: $lato;
-    color: $heading-color;
-}
 img {
     vertical-align: middle;
 }
@@ -48,6 +43,10 @@ section{
 p{
     font-size: 14px;
     color: $para-color;
+}
+.dark p{
+    font-size: 14px;
+    color: #cfd4da;
 }
 
 /*======================================
@@ -221,3 +220,83 @@ p{
               Theme Feature End              
 ========================================*/
 /* All Common css End */
+/*Messanger part start*/ 
+.Messanger{
+    position: relative;
+    .messanger_icon{
+        width: 60px;
+        height: 60px;
+        background-color: #ff4c3b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 35px;
+        right: 16px;
+        z-index: 9999;
+       
+        .messanger_form{
+            width: 400px;
+            height: 400px;
+            border-radius: 25px;
+            background-color: $white;
+            position: absolute;
+            bottom: 20px;
+            right: 90px;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all linear .3s;
+            .messanger_item{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+            .heading_text{
+                h4{
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #000;
+                    padding: 20px 0;
+                }
+                p{
+                    color: #000;
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+                button{
+                    width: 100%;
+                    background-color: rgb(255, 76, 59);
+                    color: #fff;
+                    cursor: pointer;
+                    padding: 0 30px 0 30px;
+                    border-radius: 16px;
+                    font-weight: 600;
+                    min-height: 54px;
+                    border: none;
+                    margin-top: 30px;
+                }
+            }
+            .powerd_by{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                margin-top: 20px;
+              h6{
+                margin-bottom: 0;
+              }
+            }
+        }
+
+        &:hover .messanger_form{
+            opacity: 1;
+            visibility: visible;
+    
+    }
+
+    }
+}
+/*Messanger part end*/

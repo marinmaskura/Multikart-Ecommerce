@@ -239,3 +239,26 @@ footer{
 /*===================================================
                 Footer Part Start
 =================================================== */
+/*===================================================
+                Footer Part Dark Mood Start
+=================================================== */
+.dark footer{
+    background: $heading-color;
+    color: #cfd4da;
+}
+.dark footer .footer_container .subscribe .row .news_text h4 {
+    color: #cfd4da;
+}
+.dark footer .footer_container .middle .categories h4 {
+    color: #cfd4da;
+}
+.dark footer .footer_container .middle .choose h4 {
+    color: #cfd4da;
+}
+.dark footer .footer_container .middle .address h4 {
+    color: #cfd4da;
+}
+.dark footer .powered {
+    background: $heading-color;
+    color: #cfd4da;
+}

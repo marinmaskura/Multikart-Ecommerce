@@ -102,3 +102,24 @@
 /*===================================================
                 special_products Part Start
 =================================================== */
+/*===================================================
+                special_products Part Dark Mood Start
+=================================================== */
+.dark #blog .container .section_heading h3 {
+    color: #f1f3f5;
+}
+.dark #blog .container .section_heading h5 {
+    color: #f1f3f5;
+}
+.dark #blog .container .blog_items .col-lg-3 .items .text h5 {
+    color: #f1f3f5;
+}
+.dark #blog .container .blog_items .col-lg-3 .items .text h3 {
+    color: #f1f3f5;
+}
+.dark #blog .container .blog_items .col-lg-3 .items .text h3::after {
+    background: #f1f3f5;
+}
+.dark #blog .container .blog_items .col-lg-3 .items .text p {
+    color: #f1f3f5;
+}

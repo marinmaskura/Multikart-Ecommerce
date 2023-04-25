@@ -1,7 +1,7 @@
 @import '../variable/_variable';
 @import '../mixin/mixin';
 /*===================================================
-                Product_left_sidebar Part Start
+                Blog details Part Start
 =================================================== */
 #blog_left_sidebar{
     .blog_left_container{
@@ -178,5 +178,20 @@
     }
 }
 /*===================================================
-                Product_left_sidebar Part Start
+                Blog deatails Part End
 =================================================== */
+/*===================================================
+                Blog deatails Part Dark Mood Start
+=================================================== */
+.dark #blog_left_sidebar .blog_left_container .blog_left_row .nine .blog_media .blog_right h4{
+    color: #f1f3f5;
+}
+.dark #blog_left_sidebar .blog_left_container .comment_row .comment ul li .media .text h6{
+    color: #f1f3f5;
+}
+.dark #blog_left_sidebar .blog_left_container .comment_row .comment ul li .media .text h6 span{
+    color: #f1f3f5;
+}
+.dark #blog_left_sidebar .blog_left_container .form_row h2{
+    color: #f1f3f5;
+}
