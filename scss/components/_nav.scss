@@ -25,8 +25,8 @@ header{
     
                             &:hover {
                                 font-size: 14px;
-                                color: $theme-default;
-                                cursor: pointer;
+                                // color: $theme-default;
+                                // cursor: pointer;
                                 i {
                                     font-size: 12px;
                                     padding-right: 10px;
@@ -41,7 +41,7 @@ header{
                             i {
                                 font-size: 12px;
                                 padding-right: 10px;
-                                color: $top-menu-text;
+                                color: $theme-default;
                             }
                             ;
                             a {
@@ -76,6 +76,7 @@ header{
                                     font-size: 14px;
                                     color: $top-menu-text;
                                 }
+                                
                             }
                             a {
                                 font-size: 14px;
@@ -95,7 +96,7 @@ header{
                                 background: #fff;
                                 left: 0;
                                 top: calc(100% + 19px);
-                                z-index: 50;
+                                z-index: 5000;
                                 opacity: 0;
                                 visibility: hidden;
                                 transition: $transition;
@@ -113,6 +114,7 @@ header{
                                     }
                                     a{
                                         padding: 3px 20px;
+                                        color: $heading-color;
                                         text-transform: capitalize;
                                         position: relative;
                                         transition: $transition;

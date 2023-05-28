@@ -351,8 +351,6 @@ header #top_menu .container .row .left ul li {
 }
 header #top_menu .container .row .left ul li:hover {
   font-size: 14px;
-  color: #ff4c3b;
-  cursor: pointer;
 }
 header #top_menu .container .row .left ul li:hover i {
   font-size: 12px;
@@ -366,7 +364,7 @@ header #top_menu .container .row .left ul li:hover a {
 header #top_menu .container .row .left ul li i {
   font-size: 12px;
   padding-right: 10px;
-  color: #999;
+  color: #ff4c3b;
 }
 header #top_menu .container .row .left ul li a {
   font-size: 14px;
@@ -416,7 +414,7 @@ header #top_menu .container .row .right ul li .drop_down {
   background: #fff;
   left: 0;
   top: calc(100% + 19px);
-  z-index: 50;
+  z-index: 5000;
   opacity: 0;
   visibility: hidden;
   transition: all ease 0.5s;
@@ -436,6 +434,7 @@ header #top_menu .container .row .right ul li .drop_down li i {
 }
 header #top_menu .container .row .right ul li .drop_down li a {
   padding: 3px 20px;
+  color: #222;
   text-transform: capitalize;
   position: relative;
   transition: all ease 0.5s;
@@ -2286,8 +2285,6 @@ header #top_menu .container .row .left ul li {
 }
 header #top_menu .container .row .left ul li:hover {
   font-size: 14px;
-  color: #ff4c3b;
-  cursor: pointer;
 }
 header #top_menu .container .row .left ul li:hover i {
   font-size: 12px;
@@ -2301,7 +2298,7 @@ header #top_menu .container .row .left ul li:hover a {
 header #top_menu .container .row .left ul li i {
   font-size: 12px;
   padding-right: 10px;
-  color: #999;
+  color: #ff4c3b;
 }
 header #top_menu .container .row .left ul li a {
   font-size: 14px;
@@ -2351,7 +2348,7 @@ header #top_menu .container .row .right ul li .drop_down {
   background: #fff;
   left: 0;
   top: calc(100% + 19px);
-  z-index: 50;
+  z-index: 5000;
   opacity: 0;
   visibility: hidden;
   transition: all ease 0.5s;
@@ -2371,6 +2368,7 @@ header #top_menu .container .row .right ul li .drop_down li i {
 }
 header #top_menu .container .row .right ul li .drop_down li a {
   padding: 3px 20px;
+  color: #222;
   text-transform: capitalize;
   position: relative;
   transition: all ease 0.5s;
@@ -4161,8 +4159,6 @@ header #top_menu .container .row .left ul li {
 }
 header #top_menu .container .row .left ul li:hover {
   font-size: 14px;
-  color: #ff4c3b;
-  cursor: pointer;
 }
 header #top_menu .container .row .left ul li:hover i {
   font-size: 12px;
@@ -4176,7 +4172,7 @@ header #top_menu .container .row .left ul li:hover a {
 header #top_menu .container .row .left ul li i {
   font-size: 12px;
   padding-right: 10px;
-  color: #999;
+  color: #ff4c3b;
 }
 header #top_menu .container .row .left ul li a {
   font-size: 14px;
@@ -4226,7 +4222,7 @@ header #top_menu .container .row .right ul li .drop_down {
   background: #fff;
   left: 0;
   top: calc(100% + 19px);
-  z-index: 50;
+  z-index: 5000;
   opacity: 0;
   visibility: hidden;
   transition: all ease 0.5s;
@@ -4246,6 +4242,7 @@ header #top_menu .container .row .right ul li .drop_down li i {
 }
 header #top_menu .container .row .right ul li .drop_down li a {
   padding: 3px 20px;
+  color: #222;
   text-transform: capitalize;
   position: relative;
   transition: all ease 0.5s;
@@ -5365,8 +5362,6 @@ header #top_menu .container .row .left ul li {
 }
 header #top_menu .container .row .left ul li:hover {
   font-size: 14px;
-  color: #ff4c3b;
-  cursor: pointer;
 }
 header #top_menu .container .row .left ul li:hover i {
   font-size: 12px;
@@ -5380,7 +5375,7 @@ header #top_menu .container .row .left ul li:hover a {
 header #top_menu .container .row .left ul li i {
   font-size: 12px;
   padding-right: 10px;
-  color: #999;
+  color: #ff4c3b;
 }
 header #top_menu .container .row .left ul li a {
   font-size: 14px;
@@ -5430,7 +5425,7 @@ header #top_menu .container .row .right ul li .drop_down {
   background: #fff;
   left: 0;
   top: calc(100% + 19px);
-  z-index: 50;
+  z-index: 5000;
   opacity: 0;
   visibility: hidden;
   transition: all ease 0.5s;
@@ -5450,6 +5445,7 @@ header #top_menu .container .row .right ul li .drop_down li i {
 }
 header #top_menu .container .row .right ul li .drop_down li a {
   padding: 3px 20px;
+  color: #222;
   text-transform: capitalize;
   position: relative;
   transition: all ease 0.5s;

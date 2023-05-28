@@ -30,7 +30,7 @@ $(function () {
     // banner slick slider js Start================
     $('.banner_slider').slick({
         arrows: true,
-        autoplay: false,
+        autoplay: true,
         dots: false,
         prevArrow: '<i class="fa-solid fa-chevron-left prev_arrow"></i>',
         nextArrow: '<i class="fa-solid fa-chevron-right next_arrow"></i>',
